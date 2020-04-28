@@ -29,9 +29,6 @@ TARGET_KERNEL_CONFIG := exynos7870-on7xelte_defconfig
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_on7xelte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_on7xelte
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
-
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
