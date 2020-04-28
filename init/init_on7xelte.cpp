@@ -78,31 +78,31 @@ void vendor_load_properties()
 
     std::string bootloader = GetProperty("ro.bootloader","");
 
-    if (bootloader.find("A320FL") == 0) {
-        /* SM-A320FL */
-        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/a3y17ltexc/a3y17lte:8.0.0/R16NW/A320FLXXS5CSL5:user/release-keys");
-        property_override("ro.build.description", "a3y17ltexc-user 8.0.0 R16NW A320FLXXS5CSL5 test-keys");
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-A320FL");
-        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "a3y17lte");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "a3y17ltexc");
+    if (bootloader.find("G610F") == 0) {
+        /* SM-G610F */
+        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/on7xeltexc/on7xelte:8.0.0/R16NW/A320FLXXS5CSL5:user/release-keys");
+        property_override("ro.build.description", "on7xeltexc-user 8.0.0 R16NW A320FLXXS5CSL5 test-keys");
+        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-G610F");
+        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "on7xelte");
+        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "on7xeltedd");
 
-    } else if (bootloader.find("A320FX") == 0) {
-        /* SM-A320FX */
-        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/a3y17ltexx/a3y17lte:8.0.0/R16NW/A320FXXS5CSK1:user/release-keys");
-        property_override("ro.build.description", "a3y17ltexx-user 8.0.0 R16NW A320FXXS5CSK1 test-keys");
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-A320F");
-        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "a3y17lte");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "a3y17ltexx");
+    } else if (bootloader.find("G610L") == 0) {
+        /* SM-G610L */
+        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/on7xeltexx/on7xelte:8.0.0/R16NW/A320FXXS5CSK1:user/release-keys");
+        property_override("ro.build.description", "on7xeltexx-user 8.0.0 R16NW A320FXXS5CSK1 test-keys");
+        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-G610L");
+        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "on7xelte");
+        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "on7xeltekl");
 
         init_dsds();
 
-    } else if (bootloader.find("A320Y") == 0) {
-        /* SM-A320Y */
-        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/a3y17ltedx/a3y17lte:8.0.0/R16NW/A320YDXS6CSK1:user/release-keys");
-        property_override("ro.build.description", "a3y17ltedx-user 8.0.0 R16NW A320YDXS6CSK1 test-keys");
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-A320Y");
-        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "a3y17lte");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "a3y17ltedx");
+    } else if (bootloader.find("G610K") == 0) {
+        /* SM-G610K */
+        property_override_quad("ro.bootimage.build.fingerprint", "ro.build.fingerprint", "ro.odm.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/on7xeltedx/on7xelte:8.0.0/R16NW/A320YDXS6CSK1:user/release-keys");
+        property_override("ro.build.description", "on7xeltedx-user 8.0.0 R16NW A320YDXS6CSK1 test-keys");
+        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-G610K");
+        property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "on7xelte");
+        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "on7xeltekk");
 
         init_dsds();
     }

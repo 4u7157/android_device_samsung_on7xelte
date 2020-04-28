@@ -1,11 +1,6 @@
-# Bluetooth workaround:
-# The new CAF code defaults to MCT HAL
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=rome
-
 # DPI
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=420
 
 # Fix for echo in calls
 PRODUCT_PROPERTY_OVERRIDES += \

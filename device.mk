@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,26 +14,15 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/a3y17lte
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml
+DEVICE_PATH := device/samsung/on7xelte
 
 # Bootanimation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1080
+TARGET_SCREEN_WIDTH := 1920
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio_amplifier.universal7870_32
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -44,22 +33,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung
 
-# NFC
-PRODUCT_PACKAGES += \
-    libnfc-nci \
-    libnfc_nci_jni \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    mobicore.rc \
-    wifi_device.rc
+    mobicore.rc
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -67,19 +47,20 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    macloader \
+    wifiloader \
     hostapd \
-    libcld80211 \
-    libwifi-hal \
     libwpa_client \
-    wificond \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wificond \
+    wifilogd \
+    wlutil \
+    wpa_supplicant.conf \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0 \
+    android.hardware.wifi@1.0-impl
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/wifi/grippower.info:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/grippower.info \
-    $(DEVICE_PATH)/configs/wifi/qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qcom_cfg.ini \
-    $(DEVICE_PATH)/configs/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/WCNSS_cfg.dat \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
@@ -89,4 +70,4 @@ PRODUCT_COPY_FILES += \
 # Inherit from common
 $(call inherit-product, device/samsung/universal7870-common/device-common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/a3y17lte/a3y17lte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/on7xelte/on7xelte-vendor.mk)

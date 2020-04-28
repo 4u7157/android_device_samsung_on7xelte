@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 set -e
 
 VENDOR=samsung
-DEVICE=a3y17lte
+DEVICE=on7xelte
 
-export INITIAL_COPYRIGHT_YEAR=2017
+export INITIAL_COPYRIGHT_YEAR=2020
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -39,7 +39,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}"
 
 # Copyright headers and guards
-write_headers "a3y17lte"
+write_headers "on7xelte"
 
 # The standard blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
